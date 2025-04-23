@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Riddle Generator</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    button { padding: 10px 20px; }
+  </style>
+</head>
+<body>
+  <h1>Riddle Generator</h1>
+  <button onclick="showRiddle()">Get a Riddle</button>
+  <p id="riddle"></p>
+
+  <script>
+    const riddles = [
+      "What has keys but can't open locks? — A piano.",
+      "What gets wetter the more it dries? — A towel.",
+      "I’m tall when I’m young, and I’m short when I’m old. — A candle."
+    ];
+    function showRiddle() {
+      const randomIndex = Math.floor(Math.random() * riddles.length);
+      document.getElementById('riddle').textContent = riddles[randomIndex];
+    }
+  </script>
+
+  <a href="scratch.html">Back to Scratch Page</a>
+</body>
+</html>
+<p><a href="app.html">Try my Riddle Generator App</a></p>
